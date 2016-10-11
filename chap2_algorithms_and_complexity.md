@@ -72,3 +72,31 @@ function largestAndSmallestNumbersBranched(list) {
   return { smallest, largest };
 }
 ```
+
+## Timing
+```js
+function time(fn, parameters) {
+  var start = Date.now();
+  fn.apply(null, parameters);
+  return Date.now() - start;
+}
+
+/**
+ * Gives an array of `n` numbers in range [-100, 99].
+ */
+function randomNumbers(n) {
+  var a = [];
+  for (var i = 0; i < n; i += 1) {
+    a.push(Math.floor(Math.random() * 200) - 100);
+  }
+  return a;
+}
+
+var a = randomNumbers(1e6);
+
+time(largestAndSmallestNumbers, [a])
+// 118
+
+time(largestAndSmallestNumbersBranched, [a])
+// 4
+```
