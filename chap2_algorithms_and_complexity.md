@@ -15,10 +15,11 @@ Break problem into smaller subproblems and use solutions of subproblems to contr
 
 The rocks game. Start with two piles of *even* number of rocks. Example 2x2. You may take one rock from one of the piles, or two rocks from both piles. The player taking the last rock wins.
 
-  | 0 | 1 | 2 |
-0 |   | W | L |
-1 | W | W | W |
-2 | L | W | L |
+|   | 0 | 1 | 2 |
+|---|---|---|---|
+| 0 |   | W | L |
+| 1 | W | W | W |
+| 2 | L | W | L |
 
 ## Divide-and-conquer
 When a smaller size of the problem is easier to solve then the large problem. Split the problem, solve the subproblems independently, combine the solutions of subproblems into original problem.
