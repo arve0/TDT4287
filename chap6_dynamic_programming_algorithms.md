@@ -240,7 +240,7 @@ function printLCS (b, v, i, j) {
   }
 
   if (b[i][j] === '↖') {
-    return printLCS(b, v, i - 1, j - 1) + v[i - 1];
+    return printLCS(b, v, i - 1, j - 1) + v[i - 1];  // v[i - 1] because of 0-indexing
   }
 
   if (b[i][j] === '↑') {
